@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((13#cbaoohobcoo)) | tr '0123456789ABC' 'chelbteb'
+result=$((13#$(echo $WATER | tr 'cba' '210')+13#$(echo $STIR | tr 'co.' '012'))); echo $result | tr '0123456789ABC' 'chelbteb'
