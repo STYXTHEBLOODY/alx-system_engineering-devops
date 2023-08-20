@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((($(tr 'water' '01234' <<< $WATER)+$(tr 'stir.' '01234' <<< $STIR)) % 10000000000)) | sed 'y/0123456789/bestchol/; s/^0*//'
+printf "%010d\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr 01234567 bestcholl
