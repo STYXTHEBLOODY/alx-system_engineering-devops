@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%o\n" $(( (13#$(echo $WATER | tr 'cb' '01')) + (13#$(echo $STIR | tr 'co.' '012')) )) | tr '01234567' 'chelbteb'
+printf "%o\n" $(( (13#$(tr 'cb' '01' <<< "$WATER")) + (13#$(tr 'co.' '012' <<< "$STIR")) )) | tr '01234567' 'chelbteb'
